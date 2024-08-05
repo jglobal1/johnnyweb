@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz Results</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+             <h1> <span><i class="fa-solid fa-scroll"></i></span>Flag Ninja</h1>
+            <p>Quizz App</p>
+        </div>
+    </div>
+
+
+    <div id="results-container" class="result-quiz">
+        <h2 id="result-percentage"></h2>
+        <p id="result-summary"></p>
+        <button id="restart-btn" class="restart-quiz">Restart Quiz</button>
+    </div>
+
+    <script>
+        // Retrieve scores from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = parseInt(urlParams.get('score'), 10);
+        const totalQuestions = parseInt(urlParams.get('totalQuestions'), 10);
+
+        // Calculate the percentage score
+        const percentageScore = Math.round((score / totalQuestions) * 100);
+
+        // Display the results
+        document.getElementById('result-percentage').className = "percentage" 
+        document.getElementById('result-percentage').textContent = `You are ${percentageScore}% Flag Ninja`;
+        document.getElementById('result-summary').textContent = `You got ${score} out of ${totalQuestions}`;
+        document.getElementById('result-summary').className = "summary"
+
+        // Restart the quiz
+        document.getElementById('restart-btn').onclick = () => {
+            window.location.href = 'index.html'; // Redirect to the quiz page
+        };
+    </script>
+</body>
+</html>
+
+
+
+

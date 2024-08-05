@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+p{}
+.container{
+    background-image: url(/istockphoto-1386836234-1024x1024.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.box{
+    color: white;
+    padding: 20px;
+}
+
+p{
+    color: #fd7e14;
+}
+
+#score-container{
+    margin: 140px;
+    background-color: #f8f9fa !important;;
+}
+
+#flag-quiz{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#flag-container {
+    margin-bottom: 20px;
+}
+
+#flag {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+#score-container {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#options-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between each button */
+    max-width: 700px; /* Optional: limits the width of the options */
+    
+}
+
+.option{
+    color: black;
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    font-weight: 300;
+    cursor: pointer;
+    
+    text-align: center;
+}
+
+#next{
+    position: relative;
+    right: -1002px;
+    margin-top: 20px;
+    padding-top: 10px;
+    background-image: url(/istockphoto-1386836234-1024x1024.jpg);
+    color: white;
+}
+
+.next-button{
+    display: block; /* Makes the button a block element, allowing it to take up full width */
+    width: 300px; /* Sets a fixed width for the button */
+    margin: 20px auto; /* Centers the button horizontally and adds vertical spacing */
+    padding: 10px 20px; /* Adds padding inside the button for a larger clickable area */
+    font-size: 16px; /* Sets the font size for the button text */
+    background-color: #007bff; /* Sets the button's background color (blue) */
+    color: #fff; /* Sets the text color to white */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect for background color */
+}
+
+.hidden{
+    display: none;
+}
+
+.wrong-icon{
+    border: 1px solid green;
+    margin: 20px;
+    padding: 1px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+
+.right-icon{
+    border: 1px solid green;
+    margin: 20px;
+    padding: 1px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+}
+
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+
+#results-container {
+    text-align: center; /* Center the text in the results */
+    font-size: 20px; /* Adjust font size for better readability */
+    margin-top: 50px; /* Add some margin at the top for spacing */
+}
+
+
+/* results */
+
+.percentage{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.summary{
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+.result-quiz{
+    display: relative;
+    width: 700px;
+    text-align: center;
+    margin-left: 440px;
+    padding-top: 50px;
+}
+
+#restart-btn{
+    padding: 10px;
+    background-color: #007bff; /* Sets the button's background color (blue) */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
